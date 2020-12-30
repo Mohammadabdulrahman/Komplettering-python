@@ -33,19 +33,24 @@ def main():
     choice = get_menu_selection()
     while choice != 8:
         if choice == PRINT_CAR:
-            volvo_xc60 = Car("kebab","rulle",)
+            volvo_xc60 = Car("Volvo","xc60",)
             print(volvo_xc60)
         elif choice == CHANGE_OWNER:
                 new_owner = input ("Please write the name of the new owner. ")
-                Car.owner.append(new_owner)
+                Car.set_owner(new_owner)
+        #elif choice == SAVE_CARS_TO_FILE:
+        #elif choice == LOAD_CARS_FROM_FILE:
+        #elif choice == REMOVE_CAR:
+        #elif choice == LIST_ALL_CARS:
         elif choice == ADD_CAR:
             print ("Please input brand ,model, new car price and year of manufacture")
             brand = input("Brand: ")
             model = input("Model: ")
             new_car_price = int(input("New car price: "))
-            year_of_manufacture = int(input("Year of manufacture: "))
-            CarsInStock.add_car(brand, )
-            #CarsInStock.add_car(brand,model,year_of_manufacture,new_car_price)
+            year_of_manufacture = int(input("Year of manufacture: "))          
+            CarsInStock.add_car(brand,model,new_car_price,year_of_manufacture)
+        elif choice == CLOSE:
+            exit
 
         
 
